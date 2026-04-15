@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Walls AI - Premium AI Wallpapers</title>
+  <meta name="description" content="Create stunning, unique wallpapers with AI. Premium phone backgrounds generated in seconds. Download Aura Walls AI for iPhone.">
+  <meta name="keywords" content="AI wallpaper, phone wallpaper, iPhone wallpaper, AI art, wallpaper generator, aesthetic wallpaper, custom wallpaper">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aura Walls AI - Premium AI Wallpapers">
+  <meta property="og:description" content="Create stunning, unique wallpapers with AI in seconds.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aurawallsai.com">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aura Walls AI">
+  <meta name="twitter:description" content="Premium AI wallpapers, generated in seconds.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg: #08080f;
+      --surface: #12121a;
+      --border: #1e1e2a;
+      --text: #e8e8f0;
+      --text-dim: #8888a0;
+      --accent: #7c5bf5;
+      --accent-glow: rgba(124, 91, 245, 0.3);
+      --gradient-1: #7c5bf5;
+      --gradient-2: #c05bf5;
+      --gradient-3: #5b8bf5;
+    }
+
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      background: rgba(8, 8, 15, 0.8);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: #6a4be0;
+      box-shadow: 0 0 30px var(--accent-glow);
+    }
+
+    /* --- HERO --- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      max-width: 500px;
+      margin-bottom: 48px;
+      font-weight: 300;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 36px;
+      background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+      color: white;
+      border: none;
+      border-radius: 100px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 4px 30px var(--accent-glow);
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px var(--accent-glow);
+    }
+
+    .hero-cta svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* --- FEATURES --- */
+    .features {
+      padding: 120px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 64px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 32px;
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 40px rgba(124, 91, 245, 0.1);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 1.4rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* --- HOW IT WORKS --- */
+    .how-it-works {
+      padding: 120px 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .step {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .step h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--text-dim);
+      font-weight: 300;
+    }
+
+    /* --- SOCIAL PROOF --- */
+    .social-proof {
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    .stat h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* --- CTA SECTION --- */
+    .cta-section {
+      padding: 120px 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 40px 24px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--text-dim);
+      text-decoration: none;
+      margin: 0 16px;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    .footer-links { margin-bottom: 16px; }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .stats { gap: 40px; }
+      .step { flex-direction: column; gap: 16px; }
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate {
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .animate-delay-1 { animation-delay: 0.1s; }
+    .animate-delay-2 { animation-delay: 0.2s; }
+    .animate-delay-3 { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Aura Walls AI</div>
+    <a href="#download" class="nav-cta">Download Free</a>
+  </nav>
+
+  <section class="hero">
+    <span class="hero-badge animate">Now on the App Store</span>
+    <h1 class="animate animate-delay-1">Your screen deserves <span>better than stock</span></h1>
+    <p class="animate animate-delay-2">Generate stunning, one-of-a-kind wallpapers with AI. Premium phone backgrounds created in seconds â no design skills needed.</p>
+    <a href="#download" class="hero-cta animate animate-delay-3">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      Download for iPhone
+    </a>
+  </section>
+
+  <section class="features" id="features">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Everything you need for the perfect screen</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">*</div>
+        <h3>AI-Powered Generation</h3>
+        <p>Describe any vibe, scene, or aesthetic and watch AI create a stunning wallpaper in seconds. Cosmic nebulas, minimalist patterns, abstract art â anything you can imagine.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">||</div>
+        <h3>Curated Collections</h3>
+        <p>Browse hand-picked collections updated daily. Dark mode aesthetics, nature landscapes, abstract art, anime styles, and trending designs all in one place.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">^</div>
+        <h3>Perfect Resolution</h3>
+        <p>Every wallpaper is generated at the exact resolution for your device. No stretching, no cropping, no pixelation. Crystal clear on every iPhone model.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&lt;&gt;</div>
+        <h3>Style Transfer</h3>
+        <p>Upload any photo and transform it into wallpaper art. Turn your pet into anime, your city photo into cyberpunk, or your selfie into oil painting.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">~</div>
+        <h3>Unlimited Creativity</h3>
+        <p>Pro members get unlimited generations. Create as many wallpapers as you want, save your favorites, and change your screen as often as you like.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">+</div>
+        <h3>New Styles Daily</h3>
+        <p>Our AI models are continuously updated with new artistic styles and capabilities. Your wallpaper options keep getting better over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Three taps to a new screen</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>
+          <h3>Describe your vibe</h3>
+          <p>Type a prompt or choose from trending styles. "Cosmic nebula with purple gradients" or "minimalist Japanese zen garden" â get as creative as you want.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>
+          <h3>AI generates your wallpaper</h3>
+          <p>In under 10 seconds, our AI creates a unique, high-resolution wallpaper tailored to your description. Not happy? Generate again â every result is different.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>
+          <h3>Set it and stand out</h3>
+          <p>Save to your camera roll and set as your lock screen or home screen. Your phone, your art, your style. No one else has the same wallpaper.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-proof">
+    <div class="stats">
+      <div class="stat">
+        <h2 id="counter-wallpapers">10K+</h2>
+        <p>Wallpapers generated</p>
+      </div>
+      <div class="stat">
+        <h2>4.8</h2>
+        <p>App Store rating</p>
+      </div>
+      <div class="stat">
+        <h2>50+</h2>
+        <p>Art styles</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="download">
+    <h2>Ready to upgrade your screen?</h2>
+    <p>Start creating for free. No account needed.</p>
+    <a href="https://apps.apple.com/app/id6762210275" class="hero-cta">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      Download for iPhone â Free
+    </a>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="./terms.html">Terms of Use</a>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="mailto:feraselmaarfi@gmail.com">Contact</a>
+    </div>
+    <p>2026 Aura Walls AI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card, .step, .stat').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'all 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
